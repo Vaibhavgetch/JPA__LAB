@@ -8,8 +8,8 @@ import com.jpa.entities.Author;
 
 public class AuthorDAOImpl implements AuthorDAO {
 
-	EntityManagerFactory factory = Persistence.createEntityManagerFactory("JPALab1");
-	EntityManager manager = factory.createEntityManager();
+	EntityManagerFactory factory = Persistence.createEntityManagerFactory("JPALab1");  //Step-1 EMF
+	EntityManager manager = factory.createEntityManager();           //Step-2 Creating Entity manager from EMF
 
 	@Override
 	public boolean addAuthor(Author author) {
