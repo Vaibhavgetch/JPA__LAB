@@ -41,7 +41,9 @@ public class TestApp {
 						System.out.println("Enter author id");
 						Integer id = Integer.parseInt(br.readLine());
 						authorobj = service.findAuthor(id);
-						if(authorobj != null) {
+						if(authorobj != " " )
+						//Adding null at this place might not work always due to data type issues
+						{
 							System.out.println("Author exist");
 							System.out.println(authorobj.toString());
 							Author temp = new Author();
